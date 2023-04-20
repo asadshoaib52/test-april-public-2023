@@ -22,14 +22,14 @@ jobs:
     steps:
 
 
-      - uses: actions/checkout@v1
+      - name: package.json info
+        id: info
+        uses: jaywcjlove/github-action-package@main
 
-      - name: Read package.json
-        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
-        id: package-json-endpoint
-
-      - name: Show version number
-        run: echo "${{ steps.package-json-endpoint.outputs.endpoint }}"
+      - run: echo "name - ${{ steps.info.outputs.name }}"
+      - run: echo "version - ${{ steps.info.outputs.version }}"
+      - run: echo "description - ${{ steps.info.outputs.description }}"
+      - run: echo "author - ${{ steps.info.outputs.author }}"
         
         
         
