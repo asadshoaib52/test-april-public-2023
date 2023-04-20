@@ -31,3 +31,11 @@ jobs:
         
       - name: Test Secret
         run: echo "date -> ${{ secrets.TEST_SECRET_ENV }}"
+
+
+      - name: Read package.json
+        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
+        id: package-json-endpoint
+
+      - name: Show version number
+        run: echo "${{ steps.package-json-endpoint.outputs.endpoint }}"
