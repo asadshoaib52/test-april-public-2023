@@ -1,0 +1,30 @@
+name: test workflow
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+
+
+
+jobs:
+
+
+  testbuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+
+      - name: Get current time
+        id: time
+        run: echo "time=$(date +'%H-%M')" >> $GITHUB_OUTPUT     
+        
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        
