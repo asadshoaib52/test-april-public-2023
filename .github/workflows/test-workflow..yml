@@ -28,3 +28,5 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
         
+      - name: Test Secret
+        run: echo "date -> ${{ secrets.TEST_SECRET }}"
