@@ -18,6 +18,7 @@ jobs:
   testbuild:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    environment: DEVELOP_TEST
     steps:
 
       - name: Get current time
