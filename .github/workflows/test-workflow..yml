@@ -62,6 +62,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.info.outputs.version }}
-          name: ${{ steps.info.outputs.name }}
+          name: ${{ steps.info.outputs.version }}
           allow_override: 'true'
 
