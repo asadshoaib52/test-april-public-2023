@@ -36,8 +36,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ncipollo/release-action@v1
         with:
+          tag: "${{ steps.info.outputs.version }}"
           artifacts: "release.tar.gz,foo/*.txt"
           bodyFile: "body.md"
+          
         
         
       - name: Get current time
