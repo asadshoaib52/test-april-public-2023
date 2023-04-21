@@ -63,7 +63,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.info.outputs.version }}
           name: ${{ steps.info.outputs.version }}
-          body: 'zz'
+          body: ''
           allow_override: 'true'
           
 
