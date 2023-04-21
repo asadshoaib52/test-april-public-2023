@@ -35,13 +35,13 @@ jobs:
       - run: echo "version - ${{ steps.info.outputs.version }}"
 
 
-      - uses: actions/checkout@v3
-      - uses: ncipollo/release-action@v1
-        with:
-          tag: "${{ steps.info.outputs.version }}"
-#           replacesArtifacts: 'true'
-          artifacts: "release.tar.gz,foo/*.txt"
-          bodyFile: "README.md"
+#       - uses: actions/checkout@v3
+#       - uses: ncipollo/release-action@v1
+#         with:
+#           tag: "${{ steps.info.outputs.version }}"
+# #           replacesArtifacts: 'true'
+#           artifacts: "release.tar.gz,foo/*.txt"
+#           bodyFile: "README.md"
           
         
         
