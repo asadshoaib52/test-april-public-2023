@@ -64,4 +64,5 @@ jobs:
           tag: ${{ steps.info.outputs.version }}
           name: ${{ steps.info.outputs.version }}
           allow_override: 'true'
+          body: 'README.md'
 
