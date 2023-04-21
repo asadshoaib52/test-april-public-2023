@@ -55,7 +55,7 @@ jobs:
         
       - name: Test Secret
         run: echo "date -> ${{ secrets.TEST_SECRET_ENV }}"
-
+ 
 
 
       - uses: iamkubi/github-release@2.0
@@ -64,5 +64,5 @@ jobs:
           tag: ${{ steps.info.outputs.version }}
           name: ${{ steps.info.outputs.version }}
           allow_override: 'true'
-          body: ./README.md
+
 
