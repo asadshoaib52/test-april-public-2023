@@ -79,7 +79,7 @@ jobs:
 
 
 
-      - uses: asad-boutique/github-release@2.0
+      - uses: asad-boutique/github-release@v2.0.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.info.outputs.version }}
