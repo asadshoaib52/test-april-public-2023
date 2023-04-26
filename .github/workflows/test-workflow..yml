@@ -33,6 +33,12 @@ jobs:
 
       - run: echo "name - ${{ steps.info.outputs.name }}"
       - run: echo "version - ${{ steps.info.outputs.version }}"
+      
+      
+      - run: echo "TEST THE Environment variables -> ${{ vars.TEST_SECRET_VARIABLE }}"
+
+      
+      
 
 
 #       - uses: actions/checkout@v3
@@ -79,13 +85,13 @@ jobs:
 
 
 
-      - uses: asad-boutique/github-release@v2.0.5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.info.outputs.version }}
-          name: ${{ steps.info.outputs.version }}
-          body: ${{ github.event.head_commit.message }}
-          allow_override: 'true'
+#       - uses: asad-boutique/github-release@v2.0.5
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           tag: ${{ steps.info.outputs.version }}
+#           name: ${{ steps.info.outputs.version }}
+#           body: ${{ github.event.head_commit.message }}
+#           allow_override: 'true'
           
 
 
