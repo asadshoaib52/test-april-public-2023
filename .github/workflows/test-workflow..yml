@@ -67,7 +67,19 @@ jobs:
 #           allow_override: 'true'
 
 
-      - uses: asadshoaib52/github-release@v2.0.1
+#       - uses: asadshoaib52/github-release@v2.0.1
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           tag: ${{ steps.info.outputs.version }}
+#           name: ${{ steps.info.outputs.version }}
+#           body: ${{ github.event.head_commit.message }}
+#           allow_override: 'true'
+
+
+
+
+
+      - uses: asad-boutique/github-release@v2.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.info.outputs.version }}
@@ -75,5 +87,6 @@ jobs:
           body: ${{ github.event.head_commit.message }}
           allow_override: 'true'
           
+
 
 
