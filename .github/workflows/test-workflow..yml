@@ -18,7 +18,7 @@ jobs:
   testbuild:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    environment: DEVELOP_TEST
+    environment: DEVELOP_TEST2
     permissions:
       contents: write
     steps:
